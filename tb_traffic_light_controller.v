@@ -2,12 +2,7 @@ module tb_traffic_light_controller;
 reg clk, rst;
 wire [1:0] main_out, side_out;
 // Instantiate DUT
-traffic_light_controller uut (
-    .clk(clk),
-    .rst(rst),
-    .main_out(main_out),
-    .side_out(side_out)
-);
+    traffic_light_controller tfc(clk,rst,main_out,side_out);
 // Clock generation
 always #5 clk = ~clk;
 // Stimulus
