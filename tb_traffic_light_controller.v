@@ -16,18 +16,18 @@ end
 // Monitor signals
 initial begin
     $monitor("Time=%0t | state=%b | main=%b | side=%b | count=%d",
-             $time, uut.state, main_out, side_out, uut.count);
+             $time, tfc.state, main_out, side_out, tfc.count);
 end
 // Waveform dump
 initial begin
     $dumpfile("wave.vcd");
-    $dumpvars(0, tb_tfc.clk);
-    $dumpvars(0, tb_tfc.rst);
-    $dumpvars(0, tb_tfc.main_out);
-    $dumpvars(0, tb_tfc.side_out);
-    $dumpvars(0, tb_tfc.uut.state);
-    $dumpvars(0, tb_tfc.uut.next_state);
-    $dumpvars(0, tb_tfc.uut.count);
-    $dumpvars(0, tb_tfc.uut.limit);
+  $dumpvars(0, tb_traffic_light_controller.clk);
+  $dumpvars(0, tb_traffic_light_controller.rst);
+  $dumpvars(0, tb_traffic_light_controller.main_out);
+  $dumpvars(0, tb_traffic_light_controller.side_out);
+  $dumpvars(0, tb_traffic_light_controller.tfc.state);
+  $dumpvars(0, tb_traffic_light_controller.tfc.next_state);
+  $dumpvars(0, tb_traffic_light_controller.tfc.count);
+  $dumpvars(0, tb_traffic_light_controller.tfc.limit);
 end
 endmodule
