@@ -43,9 +43,7 @@ begin
         // reset counter when state changes
         if (state != prev_state)
             count <= 0;
-
         prev_state <= state;
-
         // normal counting
         if (count == limit - 1)
             count <= 0;
@@ -60,37 +58,31 @@ begin
     main_out   = RED;
     side_out   = RED;
     next_state = state;
-
     case (state)
-
         s0: begin
             main_out = GREEN;
             side_out = RED;
             if (count == limit - 1)
                 next_state = s1;
         end
-
         s1: begin
             main_out = YELLOW;
             side_out = RED;
             if (count == limit - 1)
                 next_state = s2;
         end
-
         s2: begin
             main_out = RED;
             side_out = GREEN;
             if (count == limit - 1)
                 next_state = s3;
         end
-
         s3: begin
             main_out = RED;
             side_out = YELLOW;
             if (count == limit - 1)
                 next_state = s0;
         end
-
         default: next_state = s0;
     endcase
 end
