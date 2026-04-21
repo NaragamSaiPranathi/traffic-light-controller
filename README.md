@@ -22,7 +22,7 @@ Each state runs for a fixed number of clock cycles using a counter.
 - traffic_light_controller.v
 
 ## Tools
-I used EDA Playground / ModelSim for simulation.
+I used EDA Playground for simulation
 
 ## Author
-Your Name
+Naragam Sai Pranathi
