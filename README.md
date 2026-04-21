@@ -21,6 +21,12 @@ Each state runs for a fixed number of clock cycles using a counter.
 ## File
 - traffic_light_controller.v
 
+## Simulation Waveform
+
+This is the simulation output showing the state transitions and signal changes.
+
+![Waveform](waveform.png)
+
 ## Tools
 I used EDA Playground for simulation
 
